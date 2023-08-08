@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>Frondtend Mentor Notifications page</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;800&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="./dist/output.css" />
+	</head>
+
+	<body class="font-fontPri text-darkGreyBlue text-bodyS sm:text-bodyM">
+		<main class="grid min-h-screen place-items-center bg-veryLightGreyBlue">
+			<!-- Added the top level div so that I didn'thave to turn the entire body 
+			into a grid to place items in the center -->
+			<div
+				class="px-4 py-6 sm:px-6 sm:py-10 bg-white rounded-xl max-w-[46rem]">
+				<header class="flex justify-between items-center">
+					<div class="flex items-center gap-3">
+						<h1
+							class="text-[1.25rem] sm:text-header font-extrabold text-veryDarkGreyBlue">
+							Notifications
+						</h1>
+						<span
+							id="number-unread-notes"
+							class="px-3 py-1 bg-blue rounded-xl text-white text-bodyM"
+							>0</span
+						>
+					</div>
+					<span
+						id="mark-as-read"
+						class="text-darkGreyBlue hover:text-blue hover:cursor-pointer"
+						>Mark all as read
+					</span>
+				</header>
+				<!-- Notifications Section -->
+				<section id="notificationsContainer" class="mt-6 sm:mt-8"></section>
+			</div>
+		</main>
+		<script src="main.js" async></script>
+		<!-- May use defer instead of async in script tag -->
+	</body>
+</html>
