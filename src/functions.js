@@ -6,6 +6,7 @@ export {
 	markAsRead,
 }
 
+//Insert the notification (minus the message and picture snippet - these are conditional below)
 const insertNotificationBody = (notification, i) => {
 	return `<div id="notifications-container${i}">
                <div id="notification${i}" class="js-notifications flex justify-between rounded-xl mt-4 p-3 sm:p-5">
@@ -38,6 +39,7 @@ const insertNotificationBody = (notification, i) => {
             </div>`
 }
 
+//Insert the message (used in main.js if a message exists
 const insertNotifcationMessage = (notification) => {
 	return `<div
                class="ml-[4.4rem] sm:ml-[5.4rem] mt-2 border border-veryLightGreyBlue rounded-xl p-2 sm:p-4 hover:bg-lightGreyBlue hover:cursor-pointer">
@@ -47,6 +49,7 @@ const insertNotifcationMessage = (notification) => {
             </div>`
 }
 
+//Insert the picture snippet (used in main.js if a picture snippet exists)
 const insertPictureSnippet = (notification) => {
 	return `<img
                src="${notification.pictureSnippet}"
@@ -65,6 +68,8 @@ const displayNumberUnread = (notificationData) => {
 	numberUnreadEl.textContent = unreadNotes.length
 }
 
+//If the "Mark as read" span is clickec, mark all notification as read
+//Remove the red dot, remove the light blue background, and turn all unread to false in the data object
 let markAsRead = (notificationData, notesList) => {
 	const markAsReadEl = document.querySelector("#mark-as-read")
 	const redDots = document.querySelectorAll(".js-red-dot")
