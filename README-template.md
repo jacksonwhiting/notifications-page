@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 -  Solution URL: [Github Repository](https://github.com/jacksonwhiting/notifications-page)
--  Live Site URL: [Live Site](https://your-live-site-url.com)
+-  Live Site URL: [Live Site](https://jw-notifications-page.netlify.app/)
 
 ## My process
 
